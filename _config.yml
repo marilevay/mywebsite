@@ -2,7 +2,7 @@ title: My Website
 email: your-email@example.com
 description: >-
   A simple Jekyll site.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/mywebsite" # the subpath of your site, e.g. /blog
 url: ""      # the base hostname & protocol, e.g. https://example.com
 
 # Build settings
