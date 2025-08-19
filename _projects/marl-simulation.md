@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Cooperative MARL
-year: June 2024
+year: 2024
 summary: Exploring Multi-Agent RL with DeepMind's MeltingPot framework. 
 tags: [simulation, RL]
 status: concluded

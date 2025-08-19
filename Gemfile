@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby File.read(File.join(__dir__, '.ruby-version')).strip rescue '3.3.4'
+ruby File.read(File.join(__dir__, '.ruby-version')).strip rescue '3.4.1'
 
 gem 'jekyll', '~> 4.3'
 # Theme
