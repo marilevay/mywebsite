@@ -1,0 +1,74 @@
+---
+layout: default
+---
+<div>
+  <button class="project-drawer-toggle" id="project-drawer-toggle" aria-label="Show project list" aria-expanded="false">☰</button>
+  <aside class="project-drawer" id="project-drawer" aria-hidden="true">
+    <div class="project-drawer__header">
+      <h2>Projects</h2>
+      <button class="project-drawer-close" id="project-drawer-close" aria-label="Close project list">×</button>
+    </div>
+    <nav class="project-drawer__nav" aria-label="Project list">
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">🏠 Home</a></li>
+        {% assign all = site.projects | sort: 'year' | reverse %}
+        {% for pr in all %}
+        <li class="{% if pr.url == page.url %}active{% endif %}"><a href="{{ pr.url | relative_url }}">{{ pr.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </aside>
+</div>
+<article class="project">
+  <header class="project-header">
+  {% if page.icon %}<div class="project-icon" aria-hidden="true">{{ page.icon }}</div>{% endif %}
+    <h1>{{ page.title }}</h1>
+    <p class="project-summary">{{ page.summary }}</p>
+    <p class="project-meta">
+      {% if page.year %}<span>{{ page.year }}</span>{% endif %}
+      {% if page.status %} · <span class="status status-{{ page.status }}">{{ page.status }}</span>{% endif %}
+      {% if page.github %} · <a href="{{ page.github }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}
+    </p>
+    {% if page.tags %}<p class="tags">{% for t in page.tags %}<span class="tag">{{ t }}</span>{% endfor %}</p>{% endif %}
+  </header>
+  {% assign has_readme = page.github %}
+  {% assign has_pdfs = page.pdfs %}
+  <div class="project-tabs" role="tablist" aria-label="Project resources">
+    <button role="tab" aria-selected="true" tabindex="0" class="project-tab active" data-tab-target="readme">Overview</button>
+    <button role="tab" aria-selected="false" tabindex="-1" class="project-tab" data-tab-target="pdfs">PDFs</button>
+  </div>
+  <div class="project-panels">
+    <section id="tab-readme" class="tab-panel active" role="tabpanel" aria-label="Repository README">
+      {% if has_readme %}
+      <div class="project-body">{{ content }}</div>
+      <div id="project-readme" class="project-readme" data-github="{{ page.github }}">
+        <div class="project-readme__loader">Loading repository README…</div>
+        <noscript><p>Enable JavaScript to load repository README from GitHub.</p></noscript>
+      </div>
+      {% else %}
+      <div class="project-body">{{ content }}</div>
+      {% endif %}
+    </section>
+    <section id="tab-pdfs" class="tab-panel" role="tabpanel" aria-label="Project documents" hidden>
+      {% if has_pdfs %}
+        {% for doc in page.pdfs %}
+        <article class="project-doc" data-doc-index="{{ forloop.index0 }}">
+          <h2 class="doc-title">{{ doc.title | default: doc.path | split: '/' | last }}</h2>
+          <div class="doc-viewer-wrap">
+            <object data="{{ doc.path }}" type="application/pdf" width="100%" height="760" class="doc-object">
+              <p>Cannot display PDF. <a href="{{ doc.path }}">Download {{ doc.title | default: 'document' }}</a>.</p>
+            </object>
+          </div>
+        </article>
+        {% endfor %}
+        {% if page.pdfs.size > 1 %}
+        <nav class="doc-nav" aria-label="Document navigation">
+          {% for doc in page.pdfs %}<button class="doc-nav-btn" data-doc="{{ forloop.index0 }}">{{ doc.title | default: doc.path | split: '/' | last }}</button>{% endfor %}
+        </nav>
+        {% endif %}
+      {% else %}
+        <p class="dim">No documents yet.</p>
+      {% endif %}
+    </section>
+  </div>
+</article>
