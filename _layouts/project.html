@@ -10,10 +10,10 @@ layout: default
     </div>
     <nav class="project-drawer__nav" aria-label="Project list">
       <ul>
-        <li><a href="{{ '/' | relative_url }}">🏠 Home</a></li>
+  <li><a href="{{ '/' | relative_url }}">🏠 Home</a></li>
         {% assign all = site.projects | sort: 'year' | reverse %}
         {% for pr in all %}
-        <li class="{% if pr.url == page.url %}active{% endif %}"><a href="{{ pr.url | relative_url }}">{{ pr.title }}</a></li>
+  <li class="{% if pr.url == page.url %}active{% endif %}"><a href="{{ pr.url | relative_url }}">{{ pr.title }}</a></li>
         {% endfor %}
       </ul>
     </nav>
@@ -27,7 +27,7 @@ layout: default
     <p class="project-meta">
       {% if page.year %}<span>{{ page.year }}</span>{% endif %}
       {% if page.status %} · <span class="status status-{{ page.status }}">{{ page.status }}</span>{% endif %}
-      {% if page.github %} · <a href="{{ page.github }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}
+  {% if page.github %} · <a href="{{ page.github }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}
     </p>
     {% if page.tags %}<p class="tags">{% for t in page.tags %}<span class="tag">{{ t }}</span>{% endfor %}</p>{% endif %}
   </header>
@@ -56,7 +56,7 @@ layout: default
           <h2 class="doc-title">{{ doc.title | default: doc.path | split: '/' | last }}</h2>
           <div class="doc-viewer-wrap">
             <object data="{{ doc.path }}" type="application/pdf" width="100%" height="760" class="doc-object">
-              <p>Cannot display PDF. <a href="{{ doc.path }}">Download {{ doc.title | default: 'document' }}</a>.</p>
+              <p>Cannot display PDF. <a href="{{ doc.path | relative_url }}">Download {{ doc.title | default: 'document' }}</a>.</p>
             </object>
           </div>
         </article>
