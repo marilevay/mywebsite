@@ -11,12 +11,12 @@ body_class: home-split
 			<div class="page-icon" aria-label="Compass" title="Compass">🧭</div>
 			<h1>Hi, I'm Marina</h1>
 			<p class="lead">I'm a junior at Minerva University studying Computer Science and Math.</p>
-            <p class="lead">I like to work on projects based on theory; at the intersection of equations and computation. My interests span from AI hackathon projects to mathematical modelling and ML research.</p>
-            <p class="lead">(I'm also an avid Notion user which is what inspired the look of this page)</p>
+            <p class="lead">I like to work on projects based on theory; at the intersection of equations and computation. My interests span from AI hackathons to mathematical modelling and ML research. Here are some projects I've worked on.</p>
+            <p class="lead">(I'm also an avid Notion user which is what inspired the look of this page.)</p>
 			<ul class="home-links">
-							<li><a href="/assets/docs/alignment-course-final-project-gema-parreno.pdf" target="_blank" rel="noopener">CV</a></li>
-							<li><a href="https://www.linkedin.com/in/marina-levay/" target="_blank" rel="noopener">LinkedIn</a></li>
-						</ul>
+                <li><a href="/assets/docs/alignment-course-final-project-gema-parreno.pdf" target="_blank" rel="noopener">CV</a></li>
+                <li><a href="https://www.linkedin.com/in/marina-levay/" target="_blank" rel="noopener">LinkedIn</a></li>
+            </ul>
 		</div>
 	</div>
 	<div class="home-split__right">

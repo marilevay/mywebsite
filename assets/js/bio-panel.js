@@ -17,22 +17,47 @@ document.addEventListener('DOMContentLoaded', function() {
         let content = temp.querySelector('article.project');
         if (!content) content = temp; // fallback to all
         // Add icon-only expand button as an <a> for reliable navigation
-        const expandBtn = document.createElement('a');
+
+        // Create expand button (styled as button for consistency)
+        const expandBtn = document.createElement('button');
         expandBtn.className = 'bio-panel-expand-btn';
         expandBtn.title = 'Open full project page';
-        expandBtn.href = url;
-        expandBtn.target = '_self';
+        expandBtn.type = 'button';
         expandBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 13L13 7M13 7H8M13 7V12" stroke="#888" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-        const panel = document.createElement('div');
-        panel.className = 'project-bio-panel';
-        panel.style = 'position:relative;';
-        panel.appendChild(expandBtn);
-        panel.innerHTML += content.innerHTML;
-        leftPanel.innerHTML = '';
-        leftPanel.appendChild(panel);
-        leftPanel.scrollTop = 0;
-        // Re-initialize project.js logic for tabs and PDF nav
-        if (window.initProjectTabs) window.initProjectTabs(leftPanel);
+        expandBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.location.href = url;
+        });
+
+        // Create home button
+        const homeBtn = document.createElement('button');
+        homeBtn.className = 'bio-panel-expand-btn bio-panel-home-btn';
+        homeBtn.title = 'Return to bio';
+        homeBtn.type = 'button';
+        homeBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 10L10 4L17 10" stroke="#888" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10V16H15V10" stroke="#888" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        homeBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          if (leftPanel) leftPanel.innerHTML = defaultBio;
+        });
+
+  const btnWrap = document.createElement('div');
+  btnWrap.style = 'display:flex;align-items:center;gap:8px;margin-bottom:10px;justify-content:flex-end;';
+        btnWrap.appendChild(expandBtn);
+        btnWrap.appendChild(homeBtn);
+
+  const panel = document.createElement('div');
+  panel.className = 'project-bio-panel';
+  panel.style = 'position:relative;';
+  panel.appendChild(btnWrap);
+  // Insert the project content as a child node, not via innerHTML, to preserve button listeners
+  const contentDiv = document.createElement('div');
+  contentDiv.innerHTML = content.innerHTML;
+  panel.appendChild(contentDiv);
+  leftPanel.innerHTML = '';
+  leftPanel.appendChild(panel);
+  leftPanel.scrollTop = 0;
+  // Re-initialize project.js logic for tabs and PDF nav
+  if (window.initProjectTabs) window.initProjectTabs(leftPanel);
       });
   }
 
