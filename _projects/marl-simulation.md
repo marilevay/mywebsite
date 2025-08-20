@@ -2,7 +2,7 @@
 layout: project
 title: Cooperative MARL
 year: 2024
-summary: Exploring Multi-Agent RL with DeepMind's MeltingPot framework. 
+summary: Exploring cooperative behavior in multi-agent reinforcement learning using DeepMind's Melting Pot 2.0 framework. 
 tags: [simulation, RL]
 status: concluded
 github: https://github.com/whymath/Melting-Pot-MARL

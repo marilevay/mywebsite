@@ -1,8 +1,8 @@
 ---
 layout: project
 title: CHAPPS
-year: 2025
-summary: AI toolmaker to create personalized software.
+year: 2023
+summary: AI toolmaker to create personalized software. Project for CalHacks 2023.
 tags: [generative image, hackathon]
 status: active
 github: https://github.com/ShinnosukeUesaka/chapps
