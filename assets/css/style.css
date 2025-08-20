@@ -417,8 +417,8 @@ a:hover {
 }
 
 .gallery-card .cover {
-  flex: 0 0 40%;
-  height: 40%; /* half the card height for flatter look */
+  flex: 0 0 30%;
+  height: 30%; /* half the card height for flatter look */
   background: linear-gradient(135deg, #e2e8f0, #f8fafc);
   background-size: cover;
   background-position: center;
@@ -466,15 +466,32 @@ a:hover {
 
 /* Notion-like page icon */
 .page-icon {
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 1;
-  margin: 0 0 15px;
+  margin: 0 0 12px;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
 }
 
-/* Overlapping page cover (Notion-style) */
+/* Overlapping page icon (Notion-style) */
 .page-cover {
   position: relative;
+}
+
+.page-icon.overlap {
+  position: absolute;
+  bottom: -36px; /* slightly less downward overlap to compensate for bigger size */
+  /* Positioned 5% from the left edge for requested horizontal shift */
+  left: 5%;
+  font-size: 72px; /* increased size */
+  line-height: 1;
+  margin: 0;
+  width: auto;
+  height: auto;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
 }
 
 /* Align in split layout with same 5% base (can customize separately if needed) */

@@ -153,8 +153,8 @@ a:hover { text-decoration:underline; }
 }
 .gallery-link { display:flex; flex-direction:column; text-decoration:none; color:inherit; width:100%; }
 .gallery-card .cover {
-  flex:0 0 40%;
-  height: 40%; /* half the card height for flatter look */
+  flex:0 0 30%;
+  height: 30%; /* half the card height for flatter look */
   background: linear-gradient(135deg,#e2e8f0,#f8fafc);
   background-size:cover; background-position:center; background-repeat:no-repeat;
   transition:.3s filter,.3s transform;

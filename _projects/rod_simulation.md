@@ -2,11 +2,12 @@
 layout: project
 title: Rod Impact Simulation
 year: 2025
-summary: A concise one-liner describing what this sample project does.
-tags: [demo, example]
+summary: Simulating the impact of a solid rod over a flat surface.
+tags: [Julia, simulation]
 status: active
 github: https://github.com/marilevay/rod_impact_simulation
 hero: /assets/img/placeholder.png
 icon: 🦯
+gradient: "linear-gradient(135deg, #ff5f5fff, #fe7bb8ff)"
 pdfs: []
 ---

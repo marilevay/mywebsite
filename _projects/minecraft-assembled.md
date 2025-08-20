@@ -8,6 +8,7 @@ status: concluded
 github: https://github.com/marilevay/Minecraft-Assembled
 hero: /assets/img/placeholder.png
 icon: ⛏️
+gradient: "linear-gradient(135deg, #5fff9fff, #ffe838ff)"
 pdfs: []
 ---
 
