@@ -9,5 +9,5 @@ github: https://github.com/marilevay/rod_impact_simulation
 hero: /assets/img/placeholder.png
 icon: 🦯
 gradient: "linear-gradient(135deg, #ff5f5fff, #fe7bb8ff)"
-pdfs: []
+pdfs: [{title: "Rod Rebound Notes", path: "assets/docs/rod_rebound_notes.pdf"}]
 ---

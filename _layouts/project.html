@@ -55,8 +55,8 @@ layout: default
         <article class="project-doc" data-doc-index="{{ forloop.index0 }}">
           <h2 class="doc-title">{{ doc.title | default: doc.path | split: '/' | last }}</h2>
           <div class="doc-viewer-wrap">
-            <object data="{{ doc.path }}" type="application/pdf" width="100%" height="760" class="doc-object">
-              <p>Cannot display PDF. <a href="{{ doc.path | relative_url }}">Download {{ doc.title | default: 'document' }}</a>.</p>
+            <object data="{{ doc.path | absolute_url }}" type="application/pdf" width="100%" height="760" class="doc-object">
+              <p>Cannot display PDF. <a href="{{ doc.path | absolute_url }}">Download {{ doc.title | default: 'document' }}</a>.</p>
             </object>
           </div>
         </article>

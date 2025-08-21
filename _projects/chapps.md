@@ -4,7 +4,7 @@ title: CHAPPS
 year: 2023
 summary: AI toolmaker to create personalized software. Project for CalHacks 2023.
 tags: [generative image, hackathon]
-status: active
+status: concluded
 github: https://github.com/ShinnosukeUesaka/chapps
 hero: /assets/img/placeholder.png
 icon: 🛠️

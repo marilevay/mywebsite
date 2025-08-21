@@ -9,6 +9,6 @@ github: https://github.com/yourname/sample-tool
 hero: /assets/img/placeholder.png
 icon: 🕸️
 gradient: "linear-gradient(135deg, #da5fffff, #6600ffff)"
-pdfs: []
+pdfs: [{title: "Topology Control Research Summary", path: "assets/docs/topology_control_blog_post.pdf"}]
 ---
 
