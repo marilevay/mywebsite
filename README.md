@@ -1,4 +1,4 @@
-# mywebsite
+# Marina's Portfolio
 
 Jekyll-powered website.
 
@@ -29,21 +29,6 @@ _config.yml        # Site configuration
 Gemfile            # Ruby gem dependencies
 index.md           # Home page (uses theme layout)
 _posts/            # Blog posts (Markdown files named YYYY-MM-DD-title.md)
-```
-
-## Adding a post
-
-Create a new markdown file under `_posts` with the pattern `YYYY-MM-DD-title.md`:
-
-```markdown
----
-layout: post
-title:  "My New Post"
-date:   2025-08-12 10:00:00 -0500
-categories: misc
----
-
-Write content here.
 ```
 
 ## Build (static files)
