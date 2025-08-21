@@ -122,7 +122,7 @@ window.initProjectTabs = function(scope=document){
       const branches = ['main','master'];
       for(const br of branches){
         const raw = `https://raw.githubusercontent.com/${user}/${rname}/${br}/README.md`;
-        const res = await fetch(raw, { cache:'force-cache' });
+        const res = await fetch(raw, { cache:'reload' });
         if(res.ok){ return await res.text(); }
       }
     } catch(e){ return null; }
