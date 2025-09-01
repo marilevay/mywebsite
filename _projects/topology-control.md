@@ -5,7 +5,9 @@ year: 2025
 summary: (MIT SGI) Interpolating between 3D shapes using DL models with a topology preserving path in latent space. 
 tags: [geometry processing, research]
 status: active
-github: https://github.com/yourname/sample-tool
+website_urls:
+  - "https://summergeometry.org/sgi2025/topology-control-training-a-deepsdf-1-2/"
+  - "https://summergeometry.org/sgi2025/topology-control-pathfinding-for-genus-preservation-2-2/"
 hero: /assets/img/placeholder.png
 icon: 🕸️
 gradient: "linear-gradient(135deg, #da5fffff, #6600ffff)"

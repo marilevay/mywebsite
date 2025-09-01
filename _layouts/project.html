@@ -36,10 +36,33 @@ layout: default
   <div class="project-tabs" role="tablist" aria-label="Project resources">
     <button role="tab" aria-selected="true" tabindex="0" class="project-tab active" data-tab-target="readme">Overview</button>
     <button role="tab" aria-selected="false" tabindex="-1" class="project-tab" data-tab-target="pdfs">PDFs</button>
+    {% if page.figma_url %}
+    <button role="tab" aria-selected="false" tabindex="-1" class="project-tab" data-tab-target="figma">Figma</button>
+    {% endif %}
   </div>
   <div class="project-panels">
+    {% if page.figma_url %}
+    <section id="tab-figma" class="tab-panel" role="tabpanel" aria-label="Figma embed" hidden>
+      <div class="figma-embed-wrap">
+        <iframe style="border: 1px solid #eee; border-radius: 8px;" width="100%" height="600" src="{{ page.figma_url }}" allowfullscreen></iframe>
+      </div>
+    </section>
+    {% endif %}
     <section id="tab-readme" class="tab-panel active" role="tabpanel" aria-label="Repository README">
-      {% if has_readme %}
+      {% if page.website_urls %}
+        {% for url in page.website_urls %}
+        <div class="website-embed-wrap" style="margin-bottom: 2em;">
+          <iframe src="{{ url }}" width="100%" height="600" style="border: 1px solid #eee; border-radius: 8px;" allowfullscreen></iframe>
+        </div>
+        {% endfor %}
+      {% elsif page.website_url %}
+        <div class="website-embed-wrap" style="margin-bottom: 2em;">
+          <iframe src="{{ page.website_url }}" width="100%" height="600" style="border: 1px solid #eee; border-radius: 8px;" allowfullscreen></iframe>
+        </div>
+      {% endif %}
+      {% if page.overview_md %}
+      <div class="project-body">{{ page.overview_md | markdownify }}</div>
+      {% elsif has_readme %}
       <div class="project-body">{{ content }}</div>
       <div id="project-readme" class="project-readme" data-github="{{ page.github }}">
         <div class="project-readme__loader">Loading repository README…</div>
