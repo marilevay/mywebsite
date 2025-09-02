@@ -11,7 +11,7 @@ body_class: home-split
 			<div class="page-icon" aria-label="Compass" title="Compass">🧭</div>
 			<h1>Hi, I'm Marina</h1>
 			<p class="lead">I'm a junior at <a href="https://www.minerva.edu/" target="_blank" rel="noopener">Minerva University</a> studying Computer Science and Math.</p>
-            <p class="lead"> Over time, my interests have spanned from AI hackathons to mathematical modelling and geometry processing research. I've also worked in a couple of design projects. </p>
+            <p class="lead"> Over time, my interests have spanned from UX/UI design at AI hackathons to mathematical modelling and geometry processing research. </p>
 			<p class="lead"> Nowadays, I like to work on projects based on theory; at the intersection of equations and computation. Here are some of the things I've worked / collaborated on.</p>
             <p class="lead">(I'm also an avid Notion user which is what inspired the look of this page.)</p>
 			<ul class="home-links">
