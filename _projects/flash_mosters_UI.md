@@ -5,7 +5,7 @@ year: 2023
 summary: Multimodal Generative Flash Cards. Finalist at Eleven x Twelve Labs Multimodal Hackathon.
 tags: [UI/UX, hackathon, art]
 status: concluded
-website_url: "https://devpost.com/software/flashmonsters-bring-new-words-to-life"
+website_url: "https://docs.google.com/document/d/1-MWKrDqRow_Qr6vhC07apWuphhU35lEqEgTww-kBzdU/edit?usp=sharing"
 figma_url: "https://embed.figma.com/design/ch6mwVEfhVT35MrGwvHG9V/Eleven---Twelve-Labs-Hackathon---App-Mockup?node-id=0-1&embed-host=share"
 hero: /assets/img/placeholder.png
 icon: 👾
