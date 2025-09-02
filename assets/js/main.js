@@ -5,7 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
 	if (!toggleBtn) return;
 
 	// Always start with coding only, button says 'Art/Design'
-	let showingArt = false;
+	function initArtDesignToggle() {
+	  const toggleBtn = document.querySelector('.home-links-toggle');
+	  const cards = document.querySelectorAll('.gallery-card');
+	  if (!toggleBtn) return;
+
+	  // Persist state in localStorage
+	  let showingArt = localStorage.getItem('showingArt') === '1';
 	function updateView() {
 		if (showingArt) {
 			toggleBtn.textContent = 'Coding';
@@ -19,7 +25,21 @@ document.addEventListener('DOMContentLoaded', function() {
 			});
 		}
 	}
-	updateView();
+	  updateView();
+
+	  toggleBtn.addEventListener('click', function(e) {
+	    e.preventDefault();
+	    showingArt = !showingArt;
+	    localStorage.setItem('showingArt', showingArt ? '1' : '0');
+	    updateView();
+	  });
+	}
+
+	if (document.readyState === 'loading') {
+	  document.addEventListener('DOMContentLoaded', initArtDesignToggle);
+	} else {
+	  initArtDesignToggle();
+	}
 
 	toggleBtn.addEventListener('click', function(e) {
 		e.preventDefault();

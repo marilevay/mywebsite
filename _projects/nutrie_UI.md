@@ -11,5 +11,5 @@ website_urls:
 figma_url: "https://www.figma.com/embed?embed_host=share&url=ch6mwVEfhVT35MrGwvHG9V/Eleven-%26-Twelve-Labs-Hackathon---App-Mockup?node-id=0%3A1&t=lxgyYxRk3EKlBdoZ-1"
 hero: /assets/img/placeholder.png
 icon: 🍊
-gradient: "linear-gradient(135deg, #ff9a5fff, #feed7bff)"
+gradient: "linear-gradient(135deg, #ff6003ff, #ffcc00ff)"
 ---

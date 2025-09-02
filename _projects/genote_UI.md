@@ -9,5 +9,5 @@ github: https://github.com/tsengtinghan/genote
 figma_url: "https://embed.figma.com/design/HJ1dgYAZnVz1oIrsnGxjbh/LlamaIndex-RAG-Hackathon---Genote-UI?node-id=0-1&embed-host=share"
 hero: /assets/img/placeholder.png
 icon: 📒
-gradient: "linear-gradient(135deg, #00fff7ff, #fe7bb8ff)"
+gradient: "linear-gradient(135deg, #00fff7ff, #ff0077ff)"
 ---

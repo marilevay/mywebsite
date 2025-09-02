@@ -15,7 +15,7 @@
 {% assign classes = '' %}
 {% if page.icon %}{% assign classes = classes | append: ' has-icon' %}{% endif %}
 {% if page.body_class %}{% assign classes = classes | append: ' ' | append: page.body_class %}{% endif %}
-<body class="{{ classes | strip }}">
+<body class="{{ classes | strip }}" data-baseurl="{{ site.baseurl }}">
   <div class="page-cover" {% if page.cover or site.cover %}style="background-image:url('{{ page.cover | default: site.cover | relative_url }}')"{% endif %}>
   </div>
   <main class="page">

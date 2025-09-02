@@ -10,7 +10,7 @@ layout: default
     </div>
     <nav class="project-drawer__nav" aria-label="Project list">
       <ul>
-  <li><a href="{{ '/' | relative_url }}">🏠 Home</a></li>
+  <li><a href="{{ '/' | relative_url }}" onclick="localStorage.removeItem('showingArt')">🏠 Home</a></li>
         {% assign all = site.projects | sort: 'year' | reverse %}
         {% for pr in all %}
   <li class="{% if pr.url == page.url %}active{% endif %}"><a href="{{ pr.url | relative_url }}">{{ pr.title }}</a></li>

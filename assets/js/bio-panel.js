@@ -37,7 +37,21 @@ document.addEventListener('DOMContentLoaded', function() {
         homeBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 10L10 4L17 10" stroke="#888" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10V16H15V10" stroke="#888" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
         homeBtn.addEventListener('click', function(e) {
           e.preventDefault();
-          if (leftPanel) leftPanel.innerHTML = defaultBio;
+          // Detect if current project is art/design
+          var isArt = false;
+          var tags = document.querySelectorAll('.project-header .tags .tag');
+          tags.forEach(function(tag){
+            var t = tag.textContent.trim().toLowerCase();
+            if (t === 'art' || t === 'design') isArt = true;
+          });
+          if (isArt) {
+            localStorage.setItem('showingArt', '1');
+          } else {
+            localStorage.removeItem('showingArt');
+          }
+          var baseurl = document.body.getAttribute('data-baseurl') || '';
+          if (baseurl && !baseurl.endsWith('/')) baseurl += '/';
+          window.location.href = baseurl ? baseurl : '/';
         });
 
   const btnWrap = document.createElement('div');
