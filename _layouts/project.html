@@ -35,6 +35,9 @@ layout: default
   {% assign has_pdfs = page.pdfs %}
   <div class="project-tabs" role="tablist" aria-label="Project resources">
     <button role="tab" aria-selected="true" tabindex="0" class="project-tab active" data-tab-target="readme">Overview</button>
+    {% if page.video_urls %}
+    <button role="tab" aria-selected="false" tabindex="-1" class="project-tab" data-tab-target="video">Videos</button>
+    {% endif %}
     <button role="tab" aria-selected="false" tabindex="-1" class="project-tab" data-tab-target="pdfs">PDFs</button>
     {% if page.figma_url %}
     <button role="tab" aria-selected="false" tabindex="-1" class="project-tab" data-tab-target="figma">Figma</button>
@@ -72,6 +75,15 @@ layout: default
       <div class="project-body">{{ content }}</div>
       {% endif %}
     </section>
+    {% if page.video_urls %}
+      <section id="tab-video" class="tab-panel" role="tabpanel" aria-label="Project videos" hidden>
+        {% for url in page.video_urls %}
+          <div class="video-embed-wrap" style="margin-bottom: 2em;">
+            <iframe src="{{ url }}" width="100%" height="500" frameborder="0" allowfullscreen></iframe>
+          </div>
+        {% endfor %}
+      </section>
+    {% endif %}
     <section id="tab-pdfs" class="tab-panel" role="tabpanel" aria-label="Project documents" hidden>
       {% if has_pdfs %}
         {% for doc in page.pdfs %}
