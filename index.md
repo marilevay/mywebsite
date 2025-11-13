@@ -15,7 +15,7 @@ body_class: home-split
 			<p class="lead"> Nowadays, I like to work on projects based on theory; at the intersection of equations and computation. Here are some of the things I've worked / collaborated on.</p>
             <p class="lead">(I'm also an avid Notion user which is what inspired the look of this page.)</p>
 			<ul class="home-links">
-				<li><a href="assets/docs/Resume_09_2025_MarinaLevay.pdf" target="_blank" rel="noopener">CV</a></li>
+				<li><a href="https://docs.google.com/document/d/1lXqNM37VCeORvkck0FZrz6SlomD-1gXc39HEdP-Rp2o/view?usp=sharing" target="_blank" rel="noopener">CV</a></li>
 				<li><a href="https://github.com/marilevay" target="_blank" rel="noopener">GitHub</a></li>
 				<li><a href="https://www.linkedin.com/in/marina-levay/" target="_blank" rel="noopener">LinkedIn</a></li>
 				<li><a href="#" class="art-design-btn home-links-toggle" data-filter="art">Art/Design</a></li>
