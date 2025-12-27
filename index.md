@@ -11,9 +11,10 @@ body_class: home-split
 			<div class="page-icon" aria-label="Compass" title="Compass">🧭</div>
 			<h1>Hi, I'm Marina</h1>
 			<p class="lead">I'm a junior at <a href="https://www.minerva.edu/" target="_blank" rel="noopener">Minerva University</a> studying Computer Science and Math.</p>
-            <p class="lead"> Over time, my interests have spanned from UX/UI design at AI hackathons to mathematical modelling and geometry processing research. </p>
-			<p class="lead"> Nowadays, I like to work on projects based on theory; at the intersection of equations and computation. Here are some of the things I've worked / collaborated on.</p>
-            <p class="lead">(I'm also an avid Notion user which is what inspired the look of this page.)</p>
+			<p class="lead"> I like to solve problems in deep learning with the independent questioning of a scientist, but with the building speed of an engineer.</p>
+            <p class="lead"> Over time, my interests have grown from UX/UI design in hackathon projects to AI safety, mathematical modelling and geometry processing research. Here's what I've worked on so far. </p>
+			<p class="lead"> Fun facts: I lived in 3 different countries in undergrad. My songs change from classical to pop punk rock in the same playlist. I also can't eat bread (I've been celiac my whole life).</p>
+            <p class="lead">I'm also an avid Notion user, which is what inspired the look of this page. Have fun roaming around here!</p>
 			<ul class="home-links">
 				<li><a href="https://docs.google.com/document/d/1lXqNM37VCeORvkck0FZrz6SlomD-1gXc39HEdP-Rp2o/view?usp=sharing" target="_blank" rel="noopener">CV</a></li>
 				<li><a href="https://github.com/marilevay" target="_blank" rel="noopener">GitHub</a></li>
